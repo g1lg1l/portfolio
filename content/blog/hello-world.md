@@ -1,7 +1,7 @@
 ---
 title: Hello World!
 description: Exploring art, tech, music, and whatever else comes to mind.
-date: 2024-02-10
+date: 2026-01-01
 minRead: 4
 author:
   name: Gilbert Ndresaj
@@ -29,8 +29,4 @@ This portfolio and blog are built with [Nuxt](https://nuxt.com/) and [Nuxt Conte
 
 I chose this stack because I love working with [Vue](https://vuejs.org), and I care a lot about open-source ecosystems.
 
-## What to expect
-
-Future posts will cover frontend development, experiments, tools, music references, and notes from real projects.
-
-See you in the next post.
+See you in the next post. 👋

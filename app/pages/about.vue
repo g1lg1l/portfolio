@@ -57,7 +57,6 @@ useSeoMeta({
     >
       <MDC
         :value="page.content"
-        unwrap="p"
       />
       <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">
         <PolaroidItem

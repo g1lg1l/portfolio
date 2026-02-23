@@ -20,6 +20,13 @@ if (!posts.value) {
   })
 }
 
+const formatPostDate = (value: string | Date) =>
+  new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  }).format(new Date(value))
+
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
   ogTitle: page.value?.seo?.title || page.value?.title,
@@ -71,7 +78,11 @@ useSeoMeta({
                     ? 'sm:rotate-1 overflow-visible'
                     : 'hidden'
             }"
-          />
+          >
+            <template #date>
+              {{ formatPostDate(post.date) }}
+            </template>
+          </UBlogPost>
         </Motion>
       </UBlogPosts>
     </UPageSection>

@@ -166,7 +166,7 @@ const techStack = [
           }"
         >
           <UButton
-            v-bind="{ size: 'lg', color: 'neutral', variant: 'ghost', ...link }"
+            v-bind="{ size: 'xl', color: 'neutral', variant: 'ghost', ...link }"
           />
         </Motion>
       </div>
@@ -185,7 +185,7 @@ const techStack = [
         duration: 0.6,
         delay: 0.8
       }"
-      class="pt-2 sm:pt-4"
+      class="pt-0 sm:pt-2"
     >
       <UCarousel
         v-slot="{ item }"

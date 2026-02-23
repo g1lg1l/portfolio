@@ -5,6 +5,13 @@ defineProps<{
   page: IndexCollectionItem
 }>()
 
+const formatPostDate = (value: string | Date) =>
+  new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  }).format(new Date(value))
+
 const { data: posts } = await useAsyncData('index-blogs', () =>
   queryCollection('blog').order('date', 'DESC').limit(3).all()
 )
@@ -40,6 +47,10 @@ if (!posts.value) {
           header: 'hidden'
         }"
       >
+        <template #date>
+          {{ formatPostDate(post.date) }}
+        </template>
+
         <template #footer>
           <UButton
             size="xs"

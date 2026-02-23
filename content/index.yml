@@ -15,35 +15,31 @@ about:
   title: "About Me"
   description: |
     I'm a frontend and creative developer focused on building interfaces that feel expressive, useful, and fast.
-    I also work with Figma for design and mockups, and I love open source, creative coding, and the intersection of technology, music, and digital art while diving deeper into Godot as an ex-GameMaker engine enjoyer.
+
+    I also work with Figma for design and mockups, and I love open source, creative coding, and the intersection of technology, music, and digital art.
+
+    Currently learning the amazing Godot Engine as an game dev hobbist. (hope to finish something soon)
 experience:
   title: Work Experience
   description: My recent roles across frontend and full-stack development.
   items:
     - position: Senior Frontend Developer at
       date: Mar 2021 - Present
-      location: Torino, Piemonte, Italy
+      location: Turin, Italy
       company:
         name: Across srl
         logo: "i-simple-icons-vuedotjs"
         color: "#42B883"
-    - position: Frontend Developer at
-      date: Sep 2020 - Mar 2021
-      location: Torino, Piemonte, Italy
-      company:
-        name: NTT DATA
-        logo: "i-simple-icons-angular"
-        color: "#DD0031"
     - position: Full Stack Developer at
-      date: Nov 2019 - Sep 2020
-      location: Torino, Italy
+      date: Nov 2019 - Mar 2021
+      location: Turin, Italy
       company:
         name: NTT DATA
         logo: "i-simple-icons-java"
         color: "#5382A1"
     - position: Full Stack Developer at
       date: Jun 2018 - Nov 2019
-      location: Torino, Italy
+      location: Turin, Italy
       company:
         name: XTphere srl
         logo: "i-simple-icons-java"
