@@ -1,0 +1,14 @@
+title: Platform Shooter Demo
+slug: platformshooterdemo
+order: 3
+category: games
+description: GameMaker Studio 2 platform shooter demo project.
+draft: false
+tags: ['game', 'gml', 'gamemakerstudio2']
+cover: ''
+date: 2020-03-02
+link: https://github.com/gilnd/PlatformShooterDemo
+url: https://github.com/gilnd/PlatformShooterDemo
+image: https://opengraph.githubassets.com/1/gilnd/PlatformShooterDemo
+icon: simple-icons:gamemaker
+stars: gilnd/PlatformShooterDemo

@@ -1,0 +1,30 @@
+title: About Me
+description: Learn more about Gilbert Ndresaj, a Frontend and Creative Developer from Cuneo, Italy.
+content: |
+  Hi, I'm **Gilbert Ndresaj**, a **Frontend and Creative Developer** based in Cuneo, Italy.
+
+
+  I started working with computers when I was around 8 years old, and over time that curiosity turned into a mix of passions: web development, open source, creative coding, game development, digital art, and music.
+
+  I enjoy building projects where design and engineering work together, from polished user interfaces to experimental interactive ideas. I also spend a lot of time in **Figma** creating mockups and visual directions before implementation.
+
+  I also really love **Godot**. I'm actively learning it more deeply to build games and interactive experiences with the same creative mindset I bring to frontend work. Before that, I spent a lot of time with **GameMaker Engine**, and that background still shapes how I think about interaction and game feel.
+
+  ### What I Focus On
+
+  - Frontend architecture with modern JavaScript and TypeScript
+  - Vue and Nuxt ecosystem projects
+  - UI design and mockups in Figma
+  - Godot learning path (with a GameMaker background)
+  - Creative development and interaction-driven experiences
+  - Open-source collaboration
+
+  ### Beyond Work
+
+  Outside coding, I spend time exploring music, visual experimentation, and digital culture. I like building things that are useful, but also memorable.
+
+  If you want to collaborate, check my [projects](/projects) or reach out directly by email.
+
+images:
+  - src: /me.png
+    alt: Gilbert portrait

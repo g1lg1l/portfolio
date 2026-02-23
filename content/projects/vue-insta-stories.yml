@@ -1,0 +1,15 @@
+title: Vue Insta Stories
+slug: vueinstastories
+order: 6
+category: web
+description: Vue component for Instagram stories.
+draft: false
+tags: ['vue', 'js', 'ts']
+cover: ''
+date: 2021-05-31
+ongoing: true
+link: https://github.com/dnldsht/vue-insta-stories
+url: https://github.com/dnldsht/vue-insta-stories
+image: https://opengraph.githubassets.com/1/dnldsht/vue-insta-stories
+icon: logos:vue
+stars: dnldsht/vue-insta-stories

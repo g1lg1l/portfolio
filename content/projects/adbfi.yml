@@ -1,0 +1,14 @@
+title: adbFi
+slug: adbfi
+order: 2
+category: android
+description: adbFi is an Android app that lets you debug over Wi-Fi.
+draft: false
+tags: ['android']
+cover: ''
+date: 2019-10-08
+link: https://github.com/gilnd/adbFi
+url: https://github.com/gilnd/adbFi
+image: https://opengraph.githubassets.com/1/gilnd/adbFi
+icon: logos:android-icon
+stars: gilnd/adbFi

@@ -1,0 +1,14 @@
+title: Wappy
+slug: wappy
+order: 4
+category: web
+description: Web WhatsApp chat analyzer.
+draft: false
+tags: ['web', 'whatsapp']
+cover: ''
+date: 2021-01-30
+link: https://github.com/UnevenSoftware/wappy
+url: https://github.com/UnevenSoftware/wappy
+image: https://opengraph.githubassets.com/1/UnevenSoftware/wappy
+icon: logos:whatsapp-icon
+stars: UnevenSoftware/wappy
