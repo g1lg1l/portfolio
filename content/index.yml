@@ -1,6 +1,16 @@
 seo:
   title: "Gil - Frontend & Creative Developer"
   description: "Welcome to my portfolio. I'm Gil, a Frontend and Creative Developer based in Cuneo, Italy. I build web experiences that blend code, design, and experimentation."
+  keywords:
+    - "Gilbert Ndresaj"
+    - "Frontend Developer"
+    - "Creative Developer"
+    - "Nuxt Developer"
+    - "Vue Developer"
+    - "TypeScript"
+    - "Portfolio"
+    - "Web Development"
+  image: "/me.png"
 title: "Hey, I'm Gil"
 description: "Frontend and Creative Developer based in Cuneo, Italy. I enjoy building expressive digital experiences with modern web technologies."
 hero:

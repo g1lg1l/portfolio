@@ -5,6 +5,15 @@ export default defineAppConfig({
       light: '/me.png',
       alt: 'Gilbert Ndresaj'
     },
+    seo: {
+      siteName: 'Gilbert Ndresaj',
+      authorName: 'Gilbert Ndresaj',
+      defaultTitle: 'Frontend & Creative Developer',
+      defaultDescription: 'Portfolio of Gilbert Ndresaj, a Frontend and Creative Developer building expressive web experiences with Vue, Nuxt, TypeScript, and design.',
+      defaultImage: '/me.png',
+      locale: 'en_US',
+      twitterHandle: '@g1lg1l'
+    },
     meetingLink: 'mailto:gilbert.ndresaj@gmail.com',
     email: 'gilbert.ndresaj@gmail.com',
     available: true

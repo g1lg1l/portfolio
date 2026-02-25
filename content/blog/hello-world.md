@@ -1,6 +1,16 @@
 ---
 title: Hello World!
 description: Exploring art, tech, music, and whatever else comes to mind.
+seo:
+  title: "Hello World: Why I Started This Blog"
+  description: "A short introduction to Gilbert Ndresaj's blog and the topics behind it: frontend development, creativity, music, and digital art."
+  keywords:
+    - "Hello world blog post"
+    - "Frontend development"
+    - "Nuxt and Vue"
+    - "Creative coding"
+    - "Digital art and music"
+  image: /me.png
 date: 2026-01-01
 minRead: 4
 author:

@@ -20,6 +20,14 @@ const createImageSchema = () => z.object({
   alt: z.string()
 })
 
+const createSeoSchema = () => z.object({
+  title: z.string().optional(),
+  description: z.string().optional(),
+  keywords: z.array(z.string()).optional(),
+  image: z.string().optional(),
+  noindex: z.boolean().optional()
+})
+
 const createAuthorSchema = () => z.object({
   name: z.string(),
   description: z.string().optional(),
@@ -42,6 +50,7 @@ export default defineContentConfig({
       type: 'page',
       source: 'index.yml',
       schema: z.object({
+        seo: createSeoSchema().optional(),
         hero: z.object({
           links: z.array(createButtonSchema()),
           images: z.array(createImageSchema())
@@ -96,7 +105,8 @@ export default defineContentConfig({
         stars: z.string().optional(),
         ongoing: z.boolean().optional(),
         tags: z.array(z.string()),
-        date: z.date()
+        date: z.date(),
+        seo: createSeoSchema().optional()
       })
     }),
     blog: defineCollection({
@@ -106,7 +116,8 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }).optional(),
-        author: createAuthorSchema()
+        author: createAuthorSchema(),
+        seo: createSeoSchema().optional()
       })
     }),
     pages: defineCollection({
@@ -116,7 +127,8 @@ export default defineContentConfig({
         { include: 'blog.yml' }
       ],
       schema: z.object({
-        links: z.array(createButtonSchema())
+        links: z.array(createButtonSchema()),
+        seo: createSeoSchema().optional()
       })
     }),
     speaking: defineCollection({
@@ -124,6 +136,7 @@ export default defineContentConfig({
       source: 'speaking.yml',
       schema: z.object({
         links: z.array(createButtonSchema()),
+        seo: createSeoSchema().optional(),
         events: z.array(z.object({
           category: z.enum(['Live talk', 'Podcast', 'Conference']),
           title: z.string(),
@@ -138,7 +151,8 @@ export default defineContentConfig({
       source: 'about.yml',
       schema: z.object({
         content: z.object({}),
-        images: z.array(createImageSchema())
+        images: z.array(createImageSchema()),
+        seo: createSeoSchema().optional()
       })
     })
   }

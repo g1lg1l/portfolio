@@ -4,6 +4,8 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
+const requestURL = useRequestURL()
+const runtimeConfig = useRuntimeConfig()
 
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
@@ -19,9 +21,10 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
 
 const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
+const ogImage = page.value?.seo?.image || page.value?.image
 
-if (page.value.image) {
-  defineOgImage({ url: page.value.image })
+if (ogImage) {
+  defineOgImage({ url: ogImage })
 } else {
   defineOgImageComponent('Blog', {
     headline: breadcrumb.value.map(item => item.label).join(' > ')
@@ -32,15 +35,75 @@ if (page.value.image) {
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
+const image = ogImage || '/me.png'
+const siteOrigin = computed(() => {
+  const configuredSiteUrl = runtimeConfig.public.siteUrl?.trim()
+  if (configuredSiteUrl) {
+    return configuredSiteUrl.endsWith('/')
+      ? configuredSiteUrl.slice(0, -1)
+      : configuredSiteUrl
+  }
+
+  return requestURL.origin
+})
+
+const articleLink = computed(() => {
+  return new URL(route.path, `${siteOrigin.value}/`).toString()
+})
+
+const publishedTime = page.value?.date
+  ? new Date(page.value.date).toISOString()
+  : undefined
+
+const articleSchema = computed(() => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    image: image.startsWith('http')
+      ? image
+      : new URL(image, `${siteOrigin.value}/`).toString(),
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    mainEntityOfPage: articleLink.value,
+    author: {
+      '@type': 'Person',
+      name: page.value?.author?.name || 'Gilbert Ndresaj'
+    }
+  }
+})
 
 useSeoMeta({
   title,
+  ogTitle: title,
+  twitterTitle: title,
   description,
   ogDescription: description,
-  ogTitle: title
+  twitterDescription: description,
+  ogImage: image,
+  twitterImage: image,
+  ogType: 'article',
+  keywords: page.value?.seo?.keywords?.join(', '),
+  robots: page.value?.seo?.noindex ? 'noindex, nofollow' : undefined,
+  ogUrl: articleLink,
+  twitterCard: 'summary_large_image'
 })
 
-const articleLink = computed(() => `${window?.location}`)
+useHead(() => ({
+  script: [{
+    key: 'ld-blog-post',
+    type: 'application/ld+json',
+    children: JSON.stringify(articleSchema.value)
+  }],
+  meta: publishedTime
+    ? [{
+        key: 'article-published-time',
+        property: 'article:published_time',
+        content: publishedTime
+      }]
+    : []
+}))
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {

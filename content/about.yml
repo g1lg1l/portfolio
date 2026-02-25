@@ -1,5 +1,15 @@
 title: About Me
 description: Learn more about Gilbert Ndresaj, a Frontend and Creative Developer from Cuneo, Italy.
+seo:
+  title: "About Gilbert Ndresaj | Frontend & Creative Developer"
+  description: "Learn about Gilbert Ndresaj's background, skills, and creative approach to building modern web interfaces with Vue, Nuxt, TypeScript, and design systems."
+  keywords:
+    - "About Gilbert Ndresaj"
+    - "Frontend Developer Italy"
+    - "Vue Nuxt Developer"
+    - "Creative Developer"
+    - "UI Design and Figma"
+  image: "/me.png"
 content: |
   Hi, I'm **Gilbert Ndresaj**, a **Frontend and Creative Developer** based in Cuneo, Italy.
 

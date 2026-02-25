@@ -1,2 +1,12 @@
 title: Blog
 description: Thoughts on web development, open source, creativity, music, and digital art.
+seo:
+  title: "Blog | Gilbert Ndresaj"
+  description: "Articles on frontend development, Vue and Nuxt workflows, open source, creativity, music, and digital culture."
+  keywords:
+    - "Frontend blog"
+    - "Nuxt blog"
+    - "Vue articles"
+    - "Creative coding"
+    - "Open source writing"
+  image: "/me.png"

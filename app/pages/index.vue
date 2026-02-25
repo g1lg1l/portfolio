@@ -10,11 +10,21 @@ if (!page.value) {
   });
 }
 
+const seo = page.value?.seo;
+const title = seo?.title || page.value?.title;
+const description = seo?.description || page.value?.description;
+
 useSeoMeta({
-  title: page.value?.seo.title || page.value?.title,
-  ogTitle: page.value?.seo.title || page.value?.title,
-  description: page.value?.seo.description || page.value?.description,
-  ogDescription: page.value?.seo.description || page.value?.description,
+  title,
+  ogTitle: title,
+  twitterTitle: title,
+  description,
+  ogDescription: description,
+  twitterDescription: description,
+  ogImage: seo?.image,
+  twitterImage: seo?.image,
+  keywords: seo?.keywords?.join(", "),
+  robots: seo?.noindex ? "noindex, nofollow" : undefined,
 });
 </script>
 
