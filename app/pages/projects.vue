@@ -1,26 +1,26 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("projects-page", () => {
-  return queryCollection("pages").path("/projects").first();
-});
+const { data: page } = await useAsyncData('projects-page', () => {
+  return queryCollection('pages').path('/projects').first()
+})
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page not found",
-    fatal: true,
-  });
+    statusMessage: 'Page not found',
+    fatal: true
+  })
 }
 
-const { data: projects } = await useAsyncData("projects", () => {
-  return queryCollection("projects")
-    .order("order", "ASC")
-    .order("date", "DESC")
-    .all();
-});
+const { data: projects } = await useAsyncData('projects', () => {
+  return queryCollection('projects')
+    .order('order', 'ASC')
+    .order('date', 'DESC')
+    .all()
+})
 
-const { global } = useAppConfig();
-const seo = page.value?.seo;
-const title = seo?.title || page.value?.title;
-const description = seo?.description || page.value?.description;
+const { global } = useAppConfig()
+const seo = page.value?.seo
+const title = seo?.title || page.value?.title
+const description = seo?.description || page.value?.description
 
 useSeoMeta({
   title,
@@ -31,9 +31,9 @@ useSeoMeta({
   twitterDescription: description,
   ogImage: seo?.image,
   twitterImage: seo?.image,
-  keywords: seo?.keywords?.join(", "),
-  robots: seo?.noindex ? "noindex, nofollow" : undefined,
-});
+  keywords: seo?.keywords?.join(', '),
+  robots: seo?.noindex ? 'noindex, nofollow' : undefined
+})
 </script>
 
 <template>
@@ -45,7 +45,7 @@ useSeoMeta({
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
-        links: 'justify-start',
+        links: 'justify-start'
       }"
     >
       <template #links>
@@ -61,7 +61,7 @@ useSeoMeta({
     </UPageHero>
     <UPageSection
       :ui="{
-        container: '!pt-0',
+        container: '!pt-0'
       }"
     >
       <Motion
@@ -81,7 +81,7 @@ useSeoMeta({
           :reverse="index % 2 === 1"
           class="group"
           :ui="{
-            wrapper: 'max-sm:order-last',
+            wrapper: 'max-sm:order-last'
           }"
         >
           <template #leading>

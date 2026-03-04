@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from "@nuxt/content";
+import type { IndexCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  page: IndexCollectionItem;
-}>();
+  page: IndexCollectionItem
+}>()
 </script>
 
 <template>
@@ -14,7 +14,7 @@ defineProps<{
       container: '!p-0 !m-0',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
       description:
-        'whitespace-pre-line text-left mt-3 text-sm sm:text-md lg:text-sm text-muted',
+        'whitespace-pre-line text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
     }"
   />
 </template>

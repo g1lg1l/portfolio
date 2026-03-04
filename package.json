@@ -9,6 +9,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
@@ -26,11 +28,15 @@
     "motion-v": "^1.10.3",
     "nuxt": "^4.3.1",
     "nuxt-og-image": "^5.1.13",
-    "tailwindcss": "^4.1.18"
+    "ogl": "^1.0.11",
+    "tailwindcss": "^4.1.18",
+    "three": "^0.183.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.1",
     "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"
   },

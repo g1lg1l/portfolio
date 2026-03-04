@@ -10,7 +10,12 @@ const runtimeConfig = useRuntimeConfig()
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
 )
-if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+if (!page.value)
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   queryCollectionItemSurroundings('blog', route.path, {
     fields: ['description']
@@ -18,19 +23,29 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 )
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
+const blogNavigation = computed(
+  () => navigation.value.find((item) => item.path === '/blog')?.children || []
+)
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
+const breadcrumb = computed(() =>
+  mapContentNavigation(
+    findPageBreadcrumb(blogNavigation?.value, page.value?.path)
+  ).map(({ icon, ...link }) => link)
+)
 const ogImage = page.value?.seo?.image || page.value?.image
 
 if (ogImage) {
   defineOgImage({ url: ogImage })
 } else {
-  defineOgImageComponent('Blog', {
-    headline: breadcrumb.value.map(item => item.label).join(' > ')
-  }, {
-    fonts: ['Geist:400', 'Geist:600']
-  })
+  defineOgImageComponent(
+    'Blog',
+    {
+      headline: breadcrumb.value.map((item) => item.label).join(' > ')
+    },
+    {
+      fonts: ['Geist:400', 'Geist:600']
+    }
+  )
 }
 
 const title = page.value?.seo?.title || page.value?.title
@@ -91,17 +106,21 @@ useSeoMeta({
 })
 
 useHead(() => ({
-  script: [{
-    key: 'ld-blog-post',
-    type: 'application/ld+json',
-    children: JSON.stringify(articleSchema.value)
-  }],
+  script: [
+    {
+      key: 'ld-blog-post',
+      type: 'application/ld+json',
+      children: JSON.stringify(articleSchema.value)
+    }
+  ],
   meta: publishedTime
-    ? [{
-        key: 'article-published-time',
-        property: 'article:published_time',
-        content: publishedTime
-      }]
+    ? [
+        {
+          key: 'article-published-time',
+          property: 'article:published_time',
+          content: publishedTime
+        }
+      ]
     : []
 }))
 
@@ -118,24 +137,19 @@ const formatDate = (dateString: string) => {
   <UMain class="mt-20 px-2">
     <UContainer class="relative min-h-screen">
       <UPage v-if="page">
-        <ULink
-          to="/blog"
-          class="text-sm flex items-center gap-1"
-        >
+        <ULink to="/blog" class="text-sm flex items-center gap-1">
           <UIcon name="lucide:chevron-left" />
           Blog
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
-          <div class="flex text-xs text-muted items-center justify-center gap-2">
+          <div
+            class="flex text-xs text-muted items-center justify-center gap-2"
+          >
             <span v-if="page.date">
               {{ formatDate(page.date) }}
             </span>
-            <span v-if="page.date && page.minRead">
-              -
-            </span>
-            <span v-if="page.minRead">
-              {{ page.minRead }} MIN READ
-            </span>
+            <span v-if="page.date && page.minRead"> - </span>
+            <span v-if="page.minRead"> {{ page.minRead }} MIN READ </span>
           </div>
           <NuxtImg
             v-if="page.image"
@@ -160,10 +174,7 @@ const formatDate = (dateString: string) => {
           </div>
         </div>
         <UPageBody class="max-w-3xl mx-auto">
-          <ContentRenderer
-            v-if="page.body"
-            :value="page"
-          />
+          <ContentRenderer v-if="page.body" :value="page" />
 
           <div class="flex items-center justify-end gap-2 text-sm text-muted">
             <UButton
@@ -171,7 +182,9 @@ const formatDate = (dateString: string) => {
               variant="link"
               color="neutral"
               label="Copy link"
-              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
+              @click="
+                copyToClipboard(articleLink, 'Article link copied to clipboard')
+              "
             />
           </div>
           <UContentSurround :surround />

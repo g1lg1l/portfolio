@@ -1,103 +1,103 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from "@nuxt/content";
+import type { IndexCollectionItem } from '@nuxt/content'
 
-const { footer, global } = useAppConfig();
+const { footer, global } = useAppConfig()
 
 defineProps<{
-  page: IndexCollectionItem;
-}>();
+  page: IndexCollectionItem
+}>()
 
 type TechStackItem = {
-  name: string;
-  icon: string;
-  to: string;
-  iconClass?: string;
-};
+  name: string
+  icon: string
+  to: string
+  iconClass?: string
+}
 
 const techStack: TechStackItem[] = [
   {
-    name: "JavaScript",
-    icon: "logos:javascript",
-    to: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    name: 'JavaScript',
+    icon: 'logos:javascript',
+    to: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
   },
   {
-    name: "TypeScript",
-    icon: "logos:typescript-icon",
-    to: "https://www.typescriptlang.org/",
+    name: 'TypeScript',
+    icon: 'logos:typescript-icon',
+    to: 'https://www.typescriptlang.org/'
   },
   {
-    name: "Vue",
-    icon: "logos:vue",
-    iconClass: "scale-[0.88]",
-    to: "https://vuejs.org/",
+    name: 'Vue',
+    icon: 'logos:vue',
+    iconClass: 'scale-[0.88]',
+    to: 'https://vuejs.org/'
   },
   {
-    name: "Nuxt",
-    icon: "logos:nuxt-icon",
-    iconClass: "scale-[0.9]",
-    to: "https://nuxt.com/",
+    name: 'Nuxt',
+    icon: 'logos:nuxt-icon',
+    iconClass: 'scale-[0.9]',
+    to: 'https://nuxt.com/'
   },
   {
-    name: "Vite",
-    icon: "logos:vitejs",
-    iconClass: "scale-[0.94]",
-    to: "https://vitejs.dev/",
+    name: 'Vite',
+    icon: 'logos:vitejs',
+    iconClass: 'scale-[0.94]',
+    to: 'https://vitejs.dev/'
   },
   {
-    name: "Svelte",
-    icon: "logos:svelte-icon",
-    to: "https://svelte.dev/",
+    name: 'Svelte',
+    icon: 'logos:svelte-icon',
+    to: 'https://svelte.dev/'
   },
   {
-    name: "Tailwind CSS",
-    icon: "logos:tailwindcss-icon",
-    iconClass: "scale-[0.86]",
-    to: "https://tailwindcss.com/",
+    name: 'Tailwind CSS',
+    icon: 'logos:tailwindcss-icon',
+    iconClass: 'scale-[0.86]',
+    to: 'https://tailwindcss.com/'
   },
   {
-    name: "Git",
-    icon: "logos:git-icon",
-    to: "https://git-scm.com/",
+    name: 'Git',
+    icon: 'logos:git-icon',
+    to: 'https://git-scm.com/'
   },
   {
-    name: "Docker",
-    icon: "logos:docker-icon",
-    iconClass: "scale-[0.86]",
-    to: "https://docker.com/",
+    name: 'Docker',
+    icon: 'logos:docker-icon',
+    iconClass: 'scale-[0.86]',
+    to: 'https://docker.com/'
   },
   {
-    name: "Figma",
-    icon: "logos:figma",
-    to: "https://figma.com/",
+    name: 'Figma',
+    icon: 'logos:figma',
+    to: 'https://figma.com/'
   },
   {
-    name: "VS Code",
-    icon: "logos:visual-studio-code",
-    to: "https://code.visualstudio.com/",
+    name: 'VS Code',
+    icon: 'logos:visual-studio-code',
+    to: 'https://code.visualstudio.com/'
   },
   {
-    name: "Godot",
-    icon: "logos:godot-icon",
-    to: "https://godotengine.org/",
+    name: 'Godot',
+    icon: 'logos:godot-icon',
+    to: 'https://godotengine.org/'
   },
   {
-    name: "Three.js",
-    icon: "logos:threejs",
-    iconClass: "dark:invert",
-    to: "https://threejs.org/",
+    name: 'Three.js',
+    icon: 'logos:threejs',
+    iconClass: 'dark:invert',
+    to: 'https://threejs.org/'
   },
   {
-    name: "GitHub",
-    icon: "logos:github-icon",
-    iconClass: "dark:invert",
-    to: "https://github.com/",
+    name: 'GitHub',
+    icon: 'logos:github-icon',
+    iconClass: 'dark:invert',
+    to: 'https://github.com/'
   },
   {
-    name: "GitLab",
-    icon: "logos:gitlab-icon",
-    to: "https://gitlab.com/",
-  },
-];
+    name: 'GitLab',
+    icon: 'logos:gitlab-icon',
+    to: 'https://gitlab.com/'
+  }
+]
 </script>
 
 <template>
@@ -106,22 +106,22 @@ const techStack: TechStackItem[] = [
       container: 'py-10 sm:py-14 lg:py-16 gap-10!',
       headline: 'flex items-center justify-center',
       title: 'text-shadow-md max-w-lg mx-auto',
-      links: 'mt-4 flex-col justify-center items-center',
+      links: 'mt-4 flex-col justify-center items-center'
     }"
   >
     <template #headline>
       <Motion
         :initial="{
           scale: 1.1,
-          opacity: 0,
+          opacity: 0
         }"
         :animate="{
           scale: 1,
-          opacity: 1,
+          opacity: 1
         }"
         :transition="{
           duration: 0.6,
-          delay: 0.1,
+          delay: 0.1
         }"
       >
         <NuxtImg
@@ -140,15 +140,15 @@ const techStack: TechStackItem[] = [
       <Motion
         :initial="{
           scale: 1.1,
-          opacity: 0,
+          opacity: 0
         }"
         :animate="{
           scale: 1,
-          opacity: 1,
+          opacity: 1
         }"
         :transition="{
           duration: 0.6,
-          delay: 0.1,
+          delay: 0.1
         }"
       >
         {{ page.title }}
@@ -159,15 +159,15 @@ const techStack: TechStackItem[] = [
       <Motion
         :initial="{
           scale: 1.1,
-          opacity: 0,
+          opacity: 0
         }"
         :animate="{
           scale: 1,
-          opacity: 1,
+          opacity: 1
         }"
         :transition="{
           duration: 0.6,
-          delay: 0.3,
+          delay: 0.3
         }"
       >
         {{ page.description }}
@@ -178,15 +178,15 @@ const techStack: TechStackItem[] = [
       <Motion
         :initial="{
           scale: 1.1,
-          opacity: 0,
+          opacity: 0
         }"
         :animate="{
           scale: 1,
-          opacity: 1,
+          opacity: 1
         }"
         :transition="{
           duration: 0.6,
-          delay: 0.5,
+          delay: 0.5
         }"
       >
         <div v-if="page.hero.links" class="flex items-center gap-2">
@@ -227,15 +227,15 @@ const techStack: TechStackItem[] = [
           :key="index"
           :initial="{
             scale: 1.1,
-            opacity: 0,
+            opacity: 0
           }"
           :animate="{
             scale: 1,
-            opacity: 1,
+            opacity: 1
           }"
           :transition="{
             duration: 0.6,
-            delay: 0.5 + index * 0.1,
+            delay: 0.5 + index * 0.1
           }"
         >
           <UButton
@@ -248,15 +248,15 @@ const techStack: TechStackItem[] = [
     <Motion
       :initial="{
         scale: 1.05,
-        opacity: 0,
+        opacity: 0
       }"
       :animate="{
         scale: 1,
-        opacity: 1,
+        opacity: 1
       }"
       :transition="{
         duration: 0.6,
-        delay: 0.8,
+        delay: 0.8
       }"
       class="pt-0 sm:pt-2"
     >
@@ -270,7 +270,7 @@ const techStack: TechStackItem[] = [
         :ui="{
           viewport: '-mx-4 sm:-mx-8 lg:-mx-12 max-w-(--ui-container)',
           item: 'basis-1/2 sm:basis-1/3 lg:basis-1/5 px-2',
-          dot: 'w-1 h-1',
+          dot: 'w-1 h-1'
         }"
       >
         <ULink
@@ -284,7 +284,7 @@ const techStack: TechStackItem[] = [
               size="3em"
               :class="[
                 'absolute transition-all duration-200 grayscale group-hover:grayscale-0 group-focus-visible:grayscale-0',
-                item.iconClass,
+                item.iconClass
               ]"
             />
           </span>

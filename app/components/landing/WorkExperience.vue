@@ -27,10 +27,14 @@ defineProps<{
           class="py-3 sm:py-3.5"
         >
           <div class="flex items-start justify-between gap-3">
-            <p class="text-sm sm:text-base text-left text-highlighted font-medium">
+            <p
+              class="text-sm sm:text-base text-left text-highlighted font-medium"
+            >
               {{ experience.position }} {{ experience.company.name }}
             </p>
-            <p class="text-xs sm:text-sm text-muted whitespace-nowrap text-right">
+            <p
+              class="text-xs sm:text-sm text-muted whitespace-nowrap text-right"
+            >
               {{ experience.date }}
             </p>
           </div>
@@ -46,6 +50,4 @@ defineProps<{
   </UPageSection>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

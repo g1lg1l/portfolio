@@ -40,9 +40,9 @@ const { global } = useAppConfig()
 const groupedEvents = computed((): Record<Event['category'], Event[]> => {
   const events = page.value?.events || []
   const grouped: Record<Event['category'], Event[]> = {
-    'Conference': [],
+    Conference: [],
     'Live talk': [],
-    'Podcast': []
+    Podcast: []
   }
   for (const event of events) {
     if (grouped[event.category]) grouped[event.category].push(event)
@@ -51,7 +51,10 @@ const groupedEvents = computed((): Record<Event['category'], Event[]> => {
 })
 
 function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long'
+  })
 }
 </script>
 
@@ -88,7 +91,11 @@ function formatDate(dateString: string): string {
           <h2
             class="lg:sticky lg:top-16 text-xl font-semibold tracking-tight text-highlighted"
           >
-            {{ category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase()) }}s
+            {{
+              category
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, (str) => str.toUpperCase())
+            }}s
           </h2>
         </div>
 
@@ -105,10 +112,7 @@ function formatDate(dateString: string): string {
             />
             <div class="mb-1 text-sm font-medium text-muted">
               <span>{{ event.location }}</span>
-              <span
-                v-if="event.location && event.date"
-                class="mx-1"
-              >·</span>
+              <span v-if="event.location && event.date" class="mx-1">·</span>
               <span v-if="event.date">{{ formatDate(event.date) }}</span>
             </div>
 

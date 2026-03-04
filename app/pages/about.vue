@@ -65,10 +65,10 @@ useSeoMeta({
         container: '!pt-0'
       }"
     >
-      <MDC
-        :value="page.content"
-      />
-      <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">
+      <MDC :value="page.content" />
+      <div
+        class="flex flex-row justify-center items-center py-10 space-x-[-2rem]"
+      >
         <PolaroidItem
           v-for="(image, index) in page.images"
           :key="index"
