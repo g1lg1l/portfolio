@@ -22,13 +22,15 @@ export default defineNuxtConfig({
     }
   },
 
+  build: {
+    transpile: ['@vercel/analytics', '@vercel/speed-insights']
+  },
+
   compatibilityDate: '2024-11-01',
 
   nitro: {
     prerender: {
-      routes: [
-        '/'
-      ],
+      routes: ['/'],
       crawlLinks: true
     }
   },
