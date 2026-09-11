@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Analytics } from '@vercel/analytics/nuxt'
+import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 
 const { footer, global } = useAppConfig()
 const route = useRoute()
@@ -97,12 +98,12 @@ useHead(() => ({
     {
       key: 'ld-person',
       type: 'application/ld+json',
-      children: JSON.stringify(personSchema.value)
+      innerHTML: JSON.stringify(personSchema.value)
     },
     {
       key: 'ld-website',
       type: 'application/ld+json',
-      children: JSON.stringify(websiteSchema.value)
+      innerHTML: JSON.stringify(websiteSchema.value)
     }
   ],
   htmlAttrs: {
@@ -183,5 +184,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     </ClientOnly>
 
     <Analytics />
+    <SpeedInsights />
   </UApp>
 </template>

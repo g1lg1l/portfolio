@@ -40,7 +40,6 @@ useSeoMeta({
   twitterDescription: description,
   ogImage: seo?.image,
   twitterImage: seo?.image,
-  keywords: seo?.keywords?.join(', '),
   robots: seo?.noindex ? 'noindex, nofollow' : undefined
 })
 </script>

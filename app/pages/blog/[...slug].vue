@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
 const requestURL = useRequestURL()
@@ -22,31 +19,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   })
 )
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const blogNavigation = computed(
-  () => navigation.value.find((item) => item.path === '/blog')?.children || []
-)
-
-const breadcrumb = computed(() =>
-  mapContentNavigation(
-    findPageBreadcrumb(blogNavigation?.value, page.value?.path)
-  ).map(({ icon, ...link }) => link)
-)
 const ogImage = page.value?.seo?.image || page.value?.image
-
-if (ogImage) {
-  defineOgImage({ url: ogImage })
-} else {
-  defineOgImageComponent(
-    'Blog',
-    {
-      headline: breadcrumb.value.map((item) => item.label).join(' > ')
-    },
-    {
-      fonts: ['Geist:400', 'Geist:600']
-    }
-  )
-}
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
@@ -99,7 +72,6 @@ useSeoMeta({
   ogImage: image,
   twitterImage: image,
   ogType: 'article',
-  keywords: page.value?.seo?.keywords?.join(', '),
   robots: page.value?.seo?.noindex ? 'noindex, nofollow' : undefined,
   ogUrl: articleLink,
   twitterCard: 'summary_large_image'
@@ -110,7 +82,7 @@ useHead(() => ({
     {
       key: 'ld-blog-post',
       type: 'application/ld+json',
-      children: JSON.stringify(articleSchema.value)
+      innerHTML: JSON.stringify(articleSchema.value)
     }
   ],
   meta: publishedTime

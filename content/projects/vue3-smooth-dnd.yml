@@ -1,6 +1,5 @@
 title: Vue3 Smooth DnD
 slug: vue3smoothdnd
-order: 5
 category: web
 description: Vue 3 wrapper for the smooth-dnd library.
 draft: false
@@ -8,8 +7,8 @@ tags: ['vue', 'js']
 cover: ''
 date: 2021-05-31
 ongoing: true
-link: https://github.com/gilnd/vue3-smooth-dnd
-url: https://github.com/gilnd/vue3-smooth-dnd
-image: https://opengraph.githubassets.com/1/gilnd/vue3-smooth-dnd
+link: https://github.com/g1lg1l/vue3-smooth-dnd
+url: https://github.com/g1lg1l/vue3-smooth-dnd
+image: https://opengraph.githubassets.com/1/g1lg1l/vue3-smooth-dnd
 icon: logos:vue
-stars: gilnd/vue3-smooth-dnd
+stars: g1lg1l/vue3-smooth-dnd

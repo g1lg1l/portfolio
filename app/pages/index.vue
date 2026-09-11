@@ -25,12 +25,12 @@ useSeoMeta({
   twitterDescription: description,
   ogImage: seo?.image,
   twitterImage: seo?.image,
-  keywords: seo?.keywords?.join(', '),
   robots: seo?.noindex ? 'noindex, nofollow' : undefined
 })
 </script>
 
 <template>
+  <UPage v-if="page" class="relative">
   <!-- <div
     class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full max-h-[480px] z-0 -mt-10"
   >
@@ -48,7 +48,6 @@ useSeoMeta({
       transparent
     />
   </div> -->
-  <UPage v-if="page" class="relative">
     <LandingHero :page />
     <UPageSection
       :ui="{
@@ -58,7 +57,7 @@ useSeoMeta({
       <LandingAbout :page />
       <LandingWorkExperience :page />
     </UPageSection>
-    <LandingBlog :page />
+    <!-- <LandingBlog :page /> -->
     <!-- <LandingTestimonials :page /> -->
     <!-- <LandingFAQ :page /> -->
   </UPage>

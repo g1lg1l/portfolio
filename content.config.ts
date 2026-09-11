@@ -92,7 +92,6 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         slug: z.string().nonempty(),
-        order: z.number().optional(),
         category: z.string().optional(),
         description: z.string().nonempty(),
         draft: z.boolean().optional(),

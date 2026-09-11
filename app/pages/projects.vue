@@ -12,7 +12,6 @@ if (!page.value) {
 
 const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects')
-    .order('order', 'ASC')
     .order('date', 'DESC')
     .all()
 })
@@ -31,7 +30,6 @@ useSeoMeta({
   twitterDescription: description,
   ogImage: seo?.image,
   twitterImage: seo?.image,
-  keywords: seo?.keywords?.join(', '),
   robots: seo?.noindex ? 'noindex, nofollow' : undefined
 })
 </script>
@@ -49,14 +47,11 @@ useSeoMeta({
       }"
     >
       <template #links>
-        <div v-if="page.links" class="flex items-center gap-2">
-          <UButton
-            :label="page.links[0]?.label"
-            :to="global.meetingLink"
-            v-bind="page.links[0]"
-          />
-          <UButton :to="`mailto:${global.email}`" v-bind="page.links[1]" />
-        </div>
+        <UButton
+          v-if="page.links?.[0]"
+          :to="global.meetingLink"
+          v-bind="page.links[0]"
+        />
       </template>
     </UPageHero>
     <UPageSection

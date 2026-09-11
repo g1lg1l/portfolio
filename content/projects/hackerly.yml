@@ -1,0 +1,14 @@
+title: Hackerly
+slug: hackerly
+category: web
+description: A calm, keyboard-first reader for Hacker News.
+draft: false
+tags: ['web', 'vue', 'hacker news']
+cover: ''
+date: 2026-09-10
+ongoing: true
+link: https://hackerly.vercel.app
+url: https://hackerly.vercel.app
+image: https://hackerly.vercel.app/og.png
+icon: simple-icons:ycombinator
+stars: g1lg1l/hackerly

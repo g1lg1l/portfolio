@@ -1,5 +1,5 @@
-title: Open Source & Creative Projects
-description: A selection of projects from my previous portfolio, mainly focused on frontend, open source, and experimental development.
+title: Open Source Projects
+description: A selection of projects from my previous portfolio, mainly focused on frontend, open source development.
 seo:
   title: "Projects | Gilbert Ndresaj"
   description: "Browse Gilbert Ndresaj's selected projects across frontend engineering, open source libraries, Android apps, and creative experiments."
@@ -14,4 +14,3 @@ seo:
 links:
   - label: "Let's talk"
     color: "neutral"
-  - label: "Email me"
