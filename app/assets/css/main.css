@@ -1,25 +1,44 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 @source "../../../content/**/*";
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
   --font-serif: 'Instrument Serif', serif;
+
+  /* The gold of the glasses in the logo (400) */
+  --color-gold-50: #fcfbec;
+  --color-gold-100: #f5f4d5;
+  --color-gold-200: #eae8b2;
+  --color-gold-300: #d8d58f;
+  --color-gold-400: #c4c073;
+  --color-gold-500: #a6a255;
+  --color-gold-600: #88843b;
+  --color-gold-700: #6a6626;
+  --color-gold-800: #524f1d;
+  --color-gold-900: #3e3c17;
+  --color-gold-950: #24230a;
 }
 
 :root {
   --ui-container: var(--container-4xl);
+  /* 700 keeps gold text readable on white (5.9:1) */
+  --ui-primary: var(--ui-color-primary-700);
+  --mascot-gold: var(--ui-color-primary-500);
 
   ::selection {
-    color: #282a30;
-    background-color: #c8c8c8;
+    color: var(--ui-color-neutral-900);
+    background-color: var(--ui-color-primary-200);
   }
 }
 
 .dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --mascot-gold: var(--ui-color-primary-400);
+
   ::selection {
-    color: #ffffff;
-    background-color: #474747;
+    color: var(--ui-color-neutral-900);
+    background-color: var(--ui-color-primary-400);
   }
 }

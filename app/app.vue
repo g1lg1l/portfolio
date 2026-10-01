@@ -5,7 +5,7 @@ const requestURL = useRequestURL()
 const runtimeConfig = useRuntimeConfig()
 
 const colorMode = useColorMode()
-const color = computed(() => (colorMode.value === 'dark' ? '#020618' : 'white'))
+const color = computed(() => (colorMode.value === 'dark' ? '#171717' : 'white'))
 
 const siteName = computed(() => global.seo?.siteName || 'Gilbert Ndresaj')
 const authorName = computed(() => global.seo?.authorName || siteName.value)

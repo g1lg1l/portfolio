@@ -56,25 +56,28 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
-      :ui="{
-        title: '!mx-0 text-left',
-        description: '!mx-0 text-left',
-        links: 'justify-start'
-      }"
-    >
-      <template #links>
-        <UButton
-          v-if="page.links?.[0]"
-          :to="global.meetingLink"
-          v-bind="page.links[0]"
-        />
-      </template>
-    </UPageHero>
-    <UPageSection :ui="{ container: '!pt-0 gap-20 sm:gap-24' }">
+    <header class="pt-16 pb-12 sm:pt-24 sm:pb-16">
+      <Motion
+        as="h1"
+        :initial="{ opacity: 0, y: 24 }"
+        :animate="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }"
+        class="font-serif text-7xl sm:text-8xl lg:text-9xl leading-[0.9] tracking-tight text-highlighted"
+      >
+        {{ page.title }}
+      </Motion>
+      <p class="mt-6 max-w-[38ch] text-lg sm:text-xl text-muted text-pretty">
+        {{ page.description }}
+      </p>
+      <UButton
+        v-if="page.links?.[0]"
+        v-bind="page.links[0]"
+        :to="global.meetingLink"
+        size="lg"
+        class="mt-8"
+      />
+    </header>
+    <div class="flex flex-col gap-20 pb-8 sm:gap-24">
       <ProjectShowcase
         v-for="project in featured"
         :key="project.slug"
@@ -82,9 +85,16 @@ useSeoMeta({
       />
 
       <section>
-        <h2 class="text-xl lg:text-2xl font-medium">Earlier work</h2>
+        <h2 class="font-serif text-4xl sm:text-5xl text-highlighted">
+          Earlier work
+        </h2>
         <ul class="mt-4 divide-y divide-default/70 border-y border-default/70">
-          <li v-for="project in archive" :key="project.slug">
+          <li
+            v-for="project in archive"
+            :id="project.slug"
+            :key="project.slug"
+            class="scroll-mt-24"
+          >
             <ULink
               :to="project.link || project.url"
               target="_blank"
@@ -93,8 +103,8 @@ useSeoMeta({
               <Icon
                 v-if="project.icon"
                 :name="project.icon"
-                size="1.25rem"
-                class="mt-0.5"
+                mode="svg"
+                class="mt-0.5 size-5"
               />
               <NuxtImg
                 v-else-if="project.logo"
@@ -103,7 +113,7 @@ useSeoMeta({
                 width="20"
                 height="20"
                 densities="x1 x2"
-                class="mt-0.5 size-5 rounded-sm object-cover"
+                class="mt-0.5 size-5 object-contain"
               />
               <span v-else />
               <span>
@@ -139,6 +149,6 @@ useSeoMeta({
           </li>
         </ul>
       </section>
-    </UPageSection>
+    </div>
   </UPage>
 </template>

@@ -10,9 +10,9 @@ date: 2026-10-01
 ongoing: true
 link: https://github.com/g1lg1l/stash
 url: https://github.com/g1lg1l/stash
-logo: /projects/stash/icon.png
+logo: /images/projects/stash/icon.png
 stars: g1lg1l/stash
 screenshots:
-  - /projects/stash/explore.png
-  - /projects/stash/home.png
-  - /projects/stash/detail.png
+  - /images/projects/stash/explore.png
+  - /images/projects/stash/home.png
+  - /images/projects/stash/detail.png

@@ -7,16 +7,18 @@ defineProps<{
 </script>
 
 <template>
-  <UPageSection
-    :title="page.about.title"
-    :description="page.about.description"
-    :ui="{
-      container: '!p-0 !m-0',
-      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
-      description:
-        'whitespace-pre-line text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
-    }"
-  />
+  <div>
+    <h2 class="font-serif text-4xl sm:text-5xl text-highlighted">
+      {{ page.about.title }}
+    </h2>
+    <p class="mt-6 whitespace-pre-line text-muted text-pretty leading-relaxed">
+      {{ page.about.description }}
+    </p>
+    <ULink
+      to="/about"
+      class="mt-6 inline-block font-medium text-primary hover:underline underline-offset-4"
+    >
+      More about me
+    </ULink>
+  </div>
 </template>
-
-<style scoped></style>

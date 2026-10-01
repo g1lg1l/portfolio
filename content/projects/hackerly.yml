@@ -12,7 +12,7 @@ ongoing: true
 link: https://hackerly.vercel.app
 url: https://hackerly.vercel.app
 screenshots:
-  - /projects/hackerly/story-dark.png
-  - /projects/hackerly/home-light.png
-logo: /projects/hackerly/icon.svg
+  - /images/projects/hackerly/story-dark.png
+  - /images/projects/hackerly/home-light.png
+logo: /images/projects/hackerly/icon.svg
 stars: g1lg1l/hackerly

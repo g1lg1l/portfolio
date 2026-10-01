@@ -29,7 +29,7 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page" class="relative">
-  <!-- <div
+    <!-- <div
     class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full max-h-[480px] z-0 -mt-10"
   >
     <ColorBends
@@ -47,14 +47,12 @@ useSeoMeta({
     />
   </div> -->
     <LandingHero :page />
-    <UPageSection
-      :ui="{
-        container: 'lg:grid lg:grid-cols-2 lg:gap-8 px-0! py-8!'
-      }"
-    >
+    <LandingSelectedWork />
+    <section class="grid gap-16 py-16 sm:py-20 lg:grid-cols-2 lg:gap-12">
       <LandingAbout :page />
       <LandingWorkExperience :page />
-    </UPageSection>
+    </section>
+    <LandingToolbox />
     <!-- <LandingBlog :page /> -->
     <!-- <LandingTestimonials :page /> -->
     <!-- <LandingFAQ :page /> -->

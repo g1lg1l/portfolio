@@ -26,7 +26,7 @@ Because of the `/portfolio/` base URL, **never hardcode a root-relative asset pa
 - `content/*.yml` drive the pages; the schemas are in `content.config.ts`.
 - `content/projects/*.yml`, one per project, sorted by `date` desc. `featured: true` + `tagline` + `screenshots` renders `app/components/ProjectShowcase.vue` (screenshot fan, phone frames when `category: iOS`); the rest render as rows under "Earlier work" in `app/pages/projects.vue`.
 - `stars: owner/repo` is the GitHub repo. Star counts are fetched in `projects.vue` during prerender and ship in the payload; on failure (rate limit) the count is hidden. `NUXT_GITHUB_TOKEN` lifts the limit (the Pages workflow passes `GITHUB_TOKEN`).
-- Project images live in `public/projects/<slug>/`.
+- Project images live in `public/images/projects/<slug>/`.
 - Blog and Speaking pages exist but are hidden: their nav links are commented out in `app/utils/links.ts`.
 
 ## Code style
@@ -34,6 +34,7 @@ Because of the `/portfolio/` base URL, **never hardcode a root-relative asset pa
 - Prettier: single quotes, no semicolons, no trailing commas. ESLint via `@nuxt/eslint` with stylistic `commaDangle: never`, `braceStyle: 1tbs`.
 - Prefer Nuxt UI components and Tailwind utilities; scoped CSS only for what utilities can't express (see `ProjectShowcase.vue`).
 - Motion: user-triggered "juice" (hover, drag, press) over scroll-triggered entrances. Always honour `prefers-reduced-motion`.
+- Look: Instrument Serif for headings, Public Sans for text, gold from the logo as `primary` (palette in `main.css`; 700 in light mode for contrast, 400 in dark). `GlassesMascot.vue` is the logo as an animated character (`tile` = the app-icon version, `track` = eyes follow the pointer); `public/favicon.svg` uses the same geometry.
 
 ## Dependencies
 

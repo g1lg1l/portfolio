@@ -1,4 +1,4 @@
-title: About Me
+title: I like building things that are useful, but also memorable.
 description: Learn more about Gilbert Ndresaj, a Frontend and Creative Developer from Cuneo, Italy.
 seo:
   title: "About Gilbert Ndresaj | Frontend & Creative Developer"
@@ -31,10 +31,16 @@ content: |
 
   ### Beyond Work
 
-  Outside coding, I spend time exploring music, visual experimentation, and digital culture. I like building things that are useful, but also memorable.
+  Outside coding, I spend time exploring music, visual experimentation, and digital culture.
 
   If you want to collaborate, check my [projects](/projects) or reach out directly by email.
 
-images:
-  - src: /me.png
-    alt: Gilbert portrait
+facts:
+  - label: Based in
+    value: Cuneo, Italy
+  - label: Working at
+    value: Across srl, as a senior frontend developer
+  - label: Building with
+    value: Vue, Nuxt, TypeScript and Figma
+  - label: Learning
+    value: Godot, to make small games

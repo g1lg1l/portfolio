@@ -22,7 +22,7 @@ const shots = computed(() => {
 </script>
 
 <template>
-  <article class="group">
+  <article :id="project.slug" class="group scroll-mt-24">
     <ULink
       :to="href"
       target="_blank"
@@ -57,9 +57,14 @@ const shots = computed(() => {
             width="20"
             height="20"
             densities="x1 x2"
-            class="size-5 rounded-md"
+            class="size-5 rounded-md object-contain"
           />
-          <Icon v-else-if="project.icon" :name="project.icon" size="1.25em" />
+          <Icon
+            v-else-if="project.icon"
+            :name="project.icon"
+            mode="svg"
+            class="size-5"
+          />
           <h2 class="font-medium text-highlighted">{{ project.title }}</h2>
           <span>{{ new Date(project.date).getFullYear() }}</span>
           <span

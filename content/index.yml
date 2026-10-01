@@ -11,18 +11,18 @@ seo:
     - "Portfolio"
     - "Web Development"
   image: "/me.png"
-title: "Hey, I'm Gil"
-description: "Frontend and Creative Developer based in Cuneo, Italy. I enjoy building expressive digital experiences with modern web technologies."
+title: "Hey, I'm Gil."
+description: "Frontend and creative developer in Cuneo, Italy. I build web interfaces with Vue and Nuxt, ship the occasional iPhone app, and I'm learning to make games in Godot."
 hero:
   links:
-    - label: "View Projects"
+    - label: "View projects"
       to: /projects
-      color: "neutral"
+      color: "primary"
   images:
     - src: /me.png
       alt: Gilbert portrait
 about:
-  title: "About Me"
+  title: "About me"
   description: |
     I'm a frontend and creative developer focused on building interfaces that feel expressive, useful, and fast.
 
@@ -30,7 +30,7 @@ about:
 
     Currently learning the amazing Godot Engine as an game dev hobbist. (hope to finish something soon)
 experience:
-  title: Work Experience
+  title: Experience
   description: My recent roles across frontend and full-stack development.
   items:
     - position: Senior Frontend Developer at

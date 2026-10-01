@@ -20,9 +20,9 @@
 
 ## What's on it
 
-- **Home:** who I am, where I've worked and the tools I use. The sticker of my face can be grabbed and thrown; it springs back.
+- **Home:** who I am, everything I've built, where I've worked and the tools I use. The glasses from the logo come alive: they blink, glance around and follow your cursor.
 - **[Projects](https://g1lg1l.github.io/portfolio/projects/):** the apps I'm building now, shown as a fan of real screenshots that spreads when you hover, then earlier open source work with live GitHub star counts.
-- **[About](https://g1lg1l.github.io/portfolio/about/):** the longer story, from GameMaker to Godot.
+- **[About](https://g1lg1l.github.io/portfolio/about/):** the longer story, from GameMaker to Godot. The sticker of my face can be grabbed and thrown; it springs back.
 
 ## Projects
 
@@ -59,7 +59,7 @@ Everything on the site lives in [`content/`](content):
 - `index.yml`: home page hero, about and work experience
 - `about.yml`: About page
 - `projects.yml`: Projects page title and intro
-- `projects/*.yml`: one file per project. Add `featured: true`, a `tagline` and `screenshots` (images in `public/projects/<slug>/`) to give a project a showcase. Projects with `category: iOS` get the phone fan. `stars: owner/repo` shows the GitHub star count.
+- `projects/*.yml`: one file per project. Add `featured: true`, a `tagline` and `screenshots` (images in `public/images/projects/<slug>/`) to give a project a showcase. Projects with `category: iOS` get the phone fan. `stars: owner/repo` shows the GitHub star count.
 
 The schema for each collection is in [`content.config.ts`](content.config.ts).
 

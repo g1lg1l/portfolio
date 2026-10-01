@@ -154,7 +154,7 @@ export default defineContentConfig({
       source: 'about.yml',
       schema: z.object({
         content: z.object({}),
-        images: z.array(createImageSchema()),
+        facts: z.array(z.object({ label: z.string(), value: z.string() })),
         seo: createSeoSchema().optional()
       })
     })

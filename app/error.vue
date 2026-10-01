@@ -49,6 +49,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     <UMain>
       <UContainer>
         <UPage>
+          <GlassesMascot class="mx-auto mt-24 w-40 text-highlighted" />
           <UError :error="error" />
         </UPage>
       </UContainer>

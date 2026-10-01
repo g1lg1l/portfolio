@@ -20,6 +20,14 @@ defineProps<{
         linkLeadingIcon: 'hidden'
       }"
     >
+      <template #list-leading>
+        <NuxtLink to="/" aria-label="Home" class="mr-1 rounded-lg">
+          <GlassesMascot
+            tile
+            class="size-7 transition-transform hover:-rotate-6"
+          />
+        </NuxtLink>
+      </template>
       <template #list-trailing>
         <ColorModeButton />
       </template>
