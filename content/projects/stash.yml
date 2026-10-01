@@ -1,0 +1,18 @@
+title: Stash
+slug: stash
+category: iOS
+tagline: Share it now. Find it later.
+description: A save-for-later inbox for iPhone. Share a link from any app and Stash grabs the title and picture, files it by topic, and brings it back when you've forgotten about it. No account, works offline.
+draft: false
+featured: true
+tags: ['ios', 'swift', 'swiftui', 'swiftdata', 'widgetkit']
+date: 2026-10-01
+ongoing: true
+link: https://github.com/g1lg1l/stash
+url: https://github.com/g1lg1l/stash
+logo: /projects/stash/icon.png
+stars: g1lg1l/stash
+screenshots:
+  - /projects/stash/explore.png
+  - /projects/stash/home.png
+  - /projects/stash/detail.png

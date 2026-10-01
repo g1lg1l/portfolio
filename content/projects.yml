@@ -1,0 +1,16 @@
+title: Projects
+description: Apps I've built and open source I've maintained, newest first.
+seo:
+  title: "Projects | Gilbert Ndresaj"
+  description: "Browse Gilbert Ndresaj's selected projects across frontend engineering, open source libraries, Android apps, and creative experiments."
+  keywords:
+    - "Gilbert Ndresaj projects"
+    - "Frontend projects"
+    - "Open source portfolio"
+    - "Vue projects"
+    - "Nuxt projects"
+    - "Creative development"
+  image: "/me.png"
+links:
+  - label: "Let's talk"
+    color: "neutral"

@@ -1,0 +1,18 @@
+title: Hackerly
+slug: hackerly
+category: web
+tagline: A calm, keyboard-first reader for Hacker News.
+description: The same stories, comments and ranking as Hacker News, rethought for reading. Editorial typography, a comment tree you can actually follow, a proper dark theme, and a keyboard that does everything.
+featured: true
+draft: false
+tags: ['nuxt', 'vue', 'typescript', 'tailwind css']
+cover: ''
+date: 2026-09-10
+ongoing: true
+link: https://hackerly.vercel.app
+url: https://hackerly.vercel.app
+screenshots:
+  - /projects/hackerly/story-dark.png
+  - /projects/hackerly/home-light.png
+logo: /projects/hackerly/icon.svg
+stars: g1lg1l/hackerly
