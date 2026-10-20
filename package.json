@@ -17,7 +17,7 @@
     "@iconify-json/logos": "^1.2.14",
     "@iconify-json/lucide": "^1.2.131",
     "@iconify-json/simple-icons": "^1.2.95",
-    "@nuxt/content": "^3.16.0",
+    "@nuxt/content": "^3.16.2",
     "@nuxt/icon": "^2.5.1",
     "@nuxt/image": "^2.1.0",
     "@nuxt/ui": "^4.11.1",
@@ -25,7 +25,7 @@
     "@vueuse/nuxt": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "motion-v": "^2.4.2",
-    "nuxt": "^4.5.2",
+    "nuxt": "^4.6.2",
     "tailwindcss": "^4.3.3",
     "three": "^0.186.0"
   },
