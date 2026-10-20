@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="15" fill="#1C4532"/>
+  <clipPath id="leaf"><path d="M32 7C49 18 53 37 32 58 11 37 15 18 32 7Z"/></clipPath>
+  <g clip-path="url(#leaf)">
+    <rect x="12" y="0" width="12.5" height="30" fill="#6FAE45"/>
+    <rect x="12" y="32.5" width="12.5" height="40" fill="#6FAE45"/>
+    <rect x="27" y="0" width="10" height="23" fill="#B4E07A"/>
+    <rect x="27" y="25.5" width="10" height="13" fill="#B4E07A"/>
+    <rect x="27" y="41" width="10" height="30" fill="#B4E07A"/>
+    <rect x="39.5" y="0" width="12.5" height="36" fill="#8CC75A"/>
+    <rect x="39.5" y="38.5" width="12.5" height="30" fill="#8CC75A"/>
+  </g>
+</svg>

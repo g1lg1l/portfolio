@@ -28,6 +28,7 @@
 
 | Project | What it is | Links |
 | --- | --- | --- |
+| **Midori** | A friendly kanban board for making games with friends, no sign-up needed | [Live](https://g1lg1l.github.io/midori/) · [Source](https://github.com/g1lg1l/midori) |
 | **Stash** | Save-for-later inbox for iPhone: share from any app, find it later | [Source](https://github.com/g1lg1l/stash) |
 | **Hackerly** | A calm, keyboard-first reader for Hacker News | [Live](https://hackerly.vercel.app) · [Source](https://github.com/g1lg1l/hackerly) |
 | **Vue3 Smooth DnD** | Vue 3 wrapper for the smooth-dnd library | [Source](https://github.com/g1lg1l/vue3-smooth-dnd) |

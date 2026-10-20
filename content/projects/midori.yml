@@ -1,0 +1,17 @@
+title: Midori
+slug: midori
+category: web
+tagline: A friendly kanban board for making games with friends.
+description: Make a project, share the link, and everyone's in, no sign-up needed. Columns with emoji, colours and locks, markdown checklists, @mentions and realtime updates. Mobile first and installable, with access rules enforced by the database.
+featured: true
+draft: false
+tags: ['react', 'typescript', 'tailwind css', 'supabase']
+date: 2026-10-03
+ongoing: true
+link: https://g1lg1l.github.io/midori/
+url: https://g1lg1l.github.io/midori/
+screenshots:
+  - /images/projects/midori/board-dark.png
+  - /images/projects/midori/board-light.png
+logo: /images/projects/midori/icon.svg
+stars: g1lg1l/midori
