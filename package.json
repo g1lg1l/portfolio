@@ -21,7 +21,6 @@
     "@nuxt/icon": "^2.5.1",
     "@nuxt/image": "^2.1.0",
     "@nuxt/ui": "^4.11.1",
-    "@vercel/analytics": "^2.0.1",
     "@vueuse/nuxt": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "motion-v": "^2.4.2",

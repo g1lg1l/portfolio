@@ -10,8 +10,6 @@
 
 <p align="center">
   <a href="https://g1lg1l.github.io/portfolio/"><strong>g1lg1l.github.io/portfolio</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://gilgil.vercel.app">Vercel mirror</a>
 </p>
 
 <p align="center">
@@ -30,7 +28,7 @@
 | --- | --- | --- |
 | **Midori** | A friendly kanban board for making games with friends, no sign-up needed | [Live](https://g1lg1l.github.io/midori/) · [Source](https://github.com/g1lg1l/midori) |
 | **Stash** | Save-for-later inbox for iPhone: share from any app, find it later | [Source](https://github.com/g1lg1l/stash) |
-| **Hackerly** | A calm, keyboard-first reader for Hacker News | [Live](https://hackerly.vercel.app) · [Source](https://github.com/g1lg1l/hackerly) |
+| **Hackerly** | A calm, keyboard-first reader for Hacker News | [Live](https://g1lg1l.github.io/hackerly/) · [Source](https://github.com/g1lg1l/hackerly) |
 | **Vue3 Smooth DnD** | Vue 3 wrapper for the smooth-dnd library | [Source](https://github.com/g1lg1l/vue3-smooth-dnd) |
 | **LeafPic** | Open-source Material Design gallery for Android | [Source](https://github.com/UnevenSoftware/LeafPic) |
 | **Wappy** | Web WhatsApp chat analyzer | [Source](https://github.com/UnevenSoftware/wappy) |
@@ -66,12 +64,9 @@ The schema for each collection is in [`content.config.ts`](content.config.ts).
 
 ## Deployment
 
-Every push to `main` deploys to both:
+Every push to `main` deploys to **GitHub Pages** through [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml), served from `/portfolio/`.
 
-- **GitHub Pages** (main site) through [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml), served from `/portfolio/`. Canonical and Open Graph URLs point here from both deployments.
-- **Vercel** (mirror at [gilgil.vercel.app](https://gilgil.vercel.app)) through the Vercel Git integration. [`vercel.json`](vercel.json) runs `nuxt generate`, so it's plain static files: no functions, and images are resized at build time rather than by Vercel's image optimizer. Web Analytics is only added to Vercel builds.
-
-To check the GitHub Pages build locally:
+To check the build locally:
 
 ```bash
 NUXT_APP_BASE_URL=/portfolio/ npx nuxt build --preset github_pages

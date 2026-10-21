@@ -14,10 +14,9 @@ NUXT_APP_BASE_URL=/portfolio/ npx nuxt build --preset github_pages   # the GitHu
 
 To view the Pages build, serve a folder that contains `portfolio -> .output/public` (e.g. `python3 -m http.server`) and open `/portfolio/`.
 
-## Two deploy targets
+## Deploy target
 
-- **GitHub Pages** is the main site (`.github/workflows/deploy-pages.yml`), served from `/portfolio/`. `runtimeConfig.public.siteUrl` defaults to `https://g1lg1l.github.io/portfolio`, so canonical/OG URLs point there from every deployment.
-- **Vercel** is a mirror (gilgil.vercel.app) on the Hobby plan, so keep it cheap: `vercel.json` runs `nuxt generate` (preset `vercel-static`, zero functions) and `image.provider: 'ipx'` pre-renders images instead of using Vercel's metered optimizer. `@vercel/analytics/nuxt` is only added when `process.env.VERCEL` is set. Don't add server routes, ISR or Speed Insights.
+**GitHub Pages** is the site (`.github/workflows/deploy-pages.yml`), served from `/portfolio/`. `runtimeConfig.public.siteUrl` defaults to `https://g1lg1l.github.io/portfolio`, so canonical/OG URLs point there.
 
 Because of the `/portfolio/` base URL, **never hardcode a root-relative asset path** in markup: `<img src="/x.png">` or `href="/favicon.ico"` breaks on Pages. Use `<NuxtImg>` (also optimizes; external URLs pass through untouched), `<NuxtLink>`/`<ULink>`, or prefix with `useRuntimeConfig().app.baseURL`.
 
@@ -38,6 +37,5 @@ Because of the `/portfolio/` base URL, **never hardcode a root-relative asset pa
 
 ## Dependencies
 
-- `overrides.vue-router` pins vue-router 5: `@vercel/analytics@2` declares an optional peer of `vue-router@^4`, which breaks `npm ci` against Nuxt 4.5 without it. Drop the override once they accept v5.
 - TypeScript stays on 6.x: TS 7 ships without the JS compiler API that `vue-tsc` needs.
 - Renovate is configured (`renovate.json`).

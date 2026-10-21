@@ -7,9 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'motion-v/nuxt',
-    // Vercel-only: the script 404s anywhere else (e.g. GitHub Pages)
-    ...(process.env.VERCEL ? ['@vercel/analytics/nuxt'] : [])
+    'motion-v/nuxt'
   ],
 
   devtools: {
@@ -53,7 +51,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Resized at build time into static files, never by Vercel's (metered) image optimizer
+  // Resized at build time into static files, never by a metered image optimizer
   image: {
     provider: 'ipx'
   },

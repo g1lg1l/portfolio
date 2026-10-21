@@ -1,4 +1,3 @@
-# Static mirror of the site on GitHub Pages. Vercel keeps deploying on its own.
 name: Deploy to GitHub Pages
 
 on:
