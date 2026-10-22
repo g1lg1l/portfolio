@@ -39,7 +39,7 @@ const ui = {
     <UTabs :items orientation="horizontal" :ui>
       <template #content="{ item }">
         <UAccordion
-          trailing-icon="lucide:plus"
+          trailing-icon="i-pixelarticons-plus"
           :items="item.questions"
           :unmount-on-hide="false"
           :ui="{

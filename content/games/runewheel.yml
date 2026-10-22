@@ -1,0 +1,91 @@
+title: Runewheel
+slug: runewheel
+tagline: A macabre roguelike fought on a wheel of runes.
+description: Head down through the Crypt, the Ossuary, the Pit and the Clock's heart, one room at a time. Every fight is a little machine of two rings, so turn yours, read theirs and make every step count. Spooky, a bit cruel, and very fun to break.
+status: In development
+version: 0.30 alpha
+engine: Godot 4
+platforms: [Windows, macOS, Linux, Web, Android, iOS]
+tags: [roguelike, turn-based, pixel art, dark fantasy]
+icon: /images/games/runewheel/icon.png
+cover: /images/games/runewheel/key-art.png
+screenshots:
+  - src: /images/games/runewheel/battle.webp
+    alt: A battle against a rat, fought on two rings of runes
+  - src: /images/games/runewheel/saint.webp
+    alt: The Saint, the boss of the first floor
+  - src: /images/games/runewheel/goat.webp
+    alt: The Goat, one of the bosses waiting on the second floor
+  - src: /images/games/runewheel/map.webp
+    alt: The map of a floor, room by room
+stats:
+  - label: Floors
+    value: 4
+  - label: Bosses
+    value: 6
+  - label: Characters
+    value: 7
+  - label: Runes
+    value: 74
+  - label: Enemies
+    value: 40
+  - label: Relics
+    value: 42
+bosses:
+  - name: The Saint
+    floor: The crypt
+    image: /images/games/runewheel/sprites/boss-saint.png
+  - name: The Goat
+    floor: The ossuary
+    image: /images/games/runewheel/sprites/boss-goat.png
+  - name: The Puppeteer
+    floor: The ossuary
+    image: /images/games/runewheel/sprites/boss-puppeteer.png
+  - name: Malacoda
+    floor: The pit
+    image: /images/games/runewheel/sprites/boss-malacoda.png
+  - name: The Hypocrite
+    floor: The pit
+    image: /images/games/runewheel/sprites/boss-hypocrite.png
+  - name: The Clockmaker
+    floor: The clock's heart
+    image: /images/games/runewheel/sprites/boss-clockmaker.png
+characters:
+  - name: The Pilgrim
+    blurb: A faceless pilgrim with a plain wheel.
+    power: Second needle
+    sheet: /images/games/runewheel/sprites/char-pilgrim.png
+  - name: The Penitent
+    blurb: One of the Saint's faithful. Lives on curses, with less health.
+    power: Atonement
+    sheet: /images/games/runewheel/sprites/char-penitent.png
+  - name: The Horologer
+    blurb: The guild's last Horologer. Gears and Echoes.
+    power: Rewind
+    sheet: /images/games/runewheel/sprites/char-horologer.png
+  - name: The Bellringer
+    blurb: The deaf bellringer. No Echoes, but every Invoke twice.
+    power: Thirteenth stroke
+    sheet: /images/games/runewheel/sprites/char-bellringer.png
+  - name: The Fool
+    blurb: The jester of the cups. Trusts to chance.
+    power: Juggling
+    sheet: /images/games/runewheel/sprites/char-fool.png
+  - name: The Automaton
+    blurb: The Puppeteer's brass automaton, its strings cut. A wheel of lightning.
+    power: Discharge
+    sheet: /images/games/runewheel/sprites/char-automaton.png
+  - name: The Heretic
+    blurb: Walked out of the pyre alive, and brought the fire along.
+    power: Auto-da-fé
+    sheet: /images/games/runewheel/sprites/char-heretic.png
+runes: [bell, blade, bolt, thorn, siphon, holy_chalice, eclipse_hand, arcane_shield, lightning_rod, leyden_jar, scourge, talon, bog, spring, shroud, die]
+devlog:
+  - "Oct 16: Gold just counts now. The shop and the spoils stopped throwing coins around."
+  - "Oct 15: The Fog became a trait, carried by the Saint, the Ossuary lord and the Executioner."
+  - "Oct 14: A Daily run with the same seed for everyone, and a History of every run you've played."
+  - "Oct 14: Version 0.30. Echo chains, hit pauses, cards dealt face down, a slow-mo when a boss falls."
+  - "Oct 14: An exact kill, a blow that leaves the enemy at precisely zero, doubles the bounty."
+  - "Oct 14: Pick how much shake and sparkle you want, or turn motion down altogether."
+  - "Oct 14: Phones buzz on blows, deaths and big plans."
+date: 2026-10-01

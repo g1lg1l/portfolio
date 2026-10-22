@@ -17,8 +17,9 @@ const { data: projects } = await useAsyncData('projects', () => {
 const featured = computed(() => projects.value?.filter((p) => p.featured) ?? [])
 const archive = computed(() => projects.value?.filter((p) => !p.featured) ?? [])
 
-// Fetched while prerendering, so the counts ship in the payload and visitors never hit the GitHub API
-const { data: stars } = await useAsyncData('github-stars', async (nuxtApp) => {
+// Fetched while prerendering, so the counts ship in the payload and visitors never hit the GitHub API.
+// Lazy, so a client-side visit (or the dev server) renders straight away and the counts fill in later.
+const { data: stars } = useLazyAsyncData('github-stars', async (nuxtApp) => {
   const token = import.meta.server && nuxtApp.$config.githubToken
   const repos = projects.value?.flatMap((p) => (p.stars ? [p.stars] : [])) ?? []
   const counts = await Promise.all(
@@ -62,7 +63,7 @@ useSeoMeta({
         :initial="{ opacity: 0, y: 24 }"
         :animate="{ opacity: 1, y: 0 }"
         :transition="{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }"
-        class="font-serif text-7xl sm:text-8xl lg:text-9xl leading-[0.9] tracking-tight text-highlighted"
+        class="font-pixel text-6xl sm:text-7xl lg:text-8xl leading-none text-highlighted"
       >
         {{ page.title }}
       </Motion>
@@ -85,7 +86,7 @@ useSeoMeta({
       />
 
       <section>
-        <h2 class="font-serif text-4xl sm:text-5xl text-highlighted">
+        <h2 class="font-pixel text-3xl sm:text-4xl text-highlighted">
           Earlier work
         </h2>
         <ul class="mt-4 divide-y divide-default/70 border-y border-default/70">
@@ -134,14 +135,14 @@ useSeoMeta({
                   class="flex items-center gap-1"
                   :aria-label="`${stars[project.stars]} stars on GitHub`"
                 >
-                  <UIcon name="i-lucide-star" class="size-3.5" />
+                  <UIcon name="i-pixelarticons-star" class="size-3.5" />
                   {{ formatStars(stars[project.stars]!) }}
                 </span>
                 <span class="max-sm:hidden">{{
                   new Date(project.date).getFullYear()
                 }}</span>
                 <UIcon
-                  name="i-lucide-arrow-up-right"
+                  name="i-pixelarticons-external-link"
                   class="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </span>

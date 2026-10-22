@@ -5,27 +5,19 @@
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
+  /* Headings, buttons, links and the game bits */
+  --font-pixel: 'Pixelify Sans', monospace;
+}
 
-  /* The gold of the glasses in the logo (400) */
-  --color-gold-50: #fcfbec;
-  --color-gold-100: #f5f4d5;
-  --color-gold-200: #eae8b2;
-  --color-gold-300: #d8d58f;
-  --color-gold-400: #c4c073;
-  --color-gold-500: #a6a255;
-  --color-gold-600: #88843b;
-  --color-gold-700: #6a6626;
-  --color-gold-800: #524f1d;
-  --color-gold-900: #3e3c17;
-  --color-gold-950: #24230a;
+/* Full-bleed bands (100vw) would otherwise scroll sideways by the scrollbar's width */
+html {
+  overflow-x: clip;
 }
 
 :root {
   --ui-container: var(--container-4xl);
-  /* 700 keeps gold text readable on white (5.9:1) */
-  --ui-primary: var(--ui-color-primary-700);
-  --mascot-gold: var(--ui-color-primary-500);
+  /* 600 keeps violet text readable on white (5.7:1) */
+  --ui-primary: var(--ui-color-primary-600);
 
   ::selection {
     color: var(--ui-color-neutral-900);
@@ -35,10 +27,33 @@
 
 .dark {
   --ui-primary: var(--ui-color-primary-400);
-  --mascot-gold: var(--ui-color-primary-400);
 
   ::selection {
     color: var(--ui-color-neutral-900);
     background-color: var(--ui-color-primary-400);
+  }
+}
+
+/* Corners cut in 4px steps, like a sprite's */
+.pixel-corners {
+  clip-path: polygon(
+    0 8px, 4px 8px, 4px 4px, 8px 4px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 4px) calc(100% - 8px), calc(100% - 4px) calc(100% - 4px), calc(100% - 8px) calc(100% - 4px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@utility blink {
+  animation: blink 0.8s steps(1) infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
   }
 }

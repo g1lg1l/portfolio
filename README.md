@@ -18,9 +18,10 @@
 
 ## What's on it
 
-- **Home:** who I am, everything I've built, where I've worked and the tools I use. The glasses from the logo come alive: they blink, glance around and follow your cursor.
+- **Home:** who I am, what I've built and where I've worked, as a map of levels. Next to it sits a Game Boy Advance playing a pixel runner: click it to pick it up, and browse my projects and games on its screen with the d-pad.
 - **[Projects](https://g1lg1l.github.io/portfolio/projects/):** the apps I'm building now, shown as a fan of real screenshots that spreads when you hover, then earlier open source work with live GitHub star counts.
-- **[About](https://g1lg1l.github.io/portfolio/about/):** the longer story, from GameMaker to Godot. The sticker of my face can be grabbed and thrown; it springs back.
+- **[Games](https://g1lg1l.github.io/portfolio/games/):** what I'm making in Godot, starting with Runewheel, a macabre roguelike fought on a wheel of runes: its bosses on a bendy carousel, the characters idling, the runes and the latest devlog. More on [itch.io](https://g1lg1l.itch.io/).
+- **[About](https://g1lg1l.github.io/portfolio/about/):** the longer story, from GameMaker to Godot, and my toolbox on two conveyor belts. The sticker of my face can be grabbed and thrown; it springs back.
 
 ## Projects
 
@@ -37,7 +38,7 @@
 
 ## Built with
 
-[Nuxt 4](https://nuxt.com), [Nuxt UI 4](https://ui.nuxt.com), [Nuxt Content 3](https://content.nuxt.com) for the YAML and Markdown content, [Tailwind CSS 4](https://tailwindcss.com) and [motion-v](https://motion.dev/docs/vue) for the animation. Started from the Nuxt UI portfolio template.
+[Nuxt 4](https://nuxt.com), [Nuxt UI 4](https://ui.nuxt.com), [Nuxt Content 3](https://content.nuxt.com) for the YAML and Markdown content, [Tailwind CSS 4](https://tailwindcss.com), [motion-v](https://motion.dev/docs/vue) and [three.js](https://threejs.org) for the animation, and a few components from [Vue Bits](https://vue-bits.dev). The handheld is [Retro Handheld](https://poly.pizza/m/2nwiJ7W4kkz) by Michael Fuchs (CC-BY 3.0); the page transition is the burn from Runewheel. Started from the Nuxt UI portfolio template.
 
 ## Running locally
 

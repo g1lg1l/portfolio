@@ -24,14 +24,14 @@ hero:
 about:
   title: "About me"
   description: |
-    I'm a frontend and creative developer focused on building interfaces that feel expressive, useful, and fast.
+    I'm a frontend and creative developer who likes interfaces that feel expressive, useful and fast.
 
-    I also work with Figma for design and mockups, and I love open source, creative coding, and the intersection of technology, music, and digital art.
+    I sketch in Figma before I code, I love open source and creative coding, and I'm happiest where tech bumps into music and digital art.
 
-    Currently learning the amazing Godot Engine as an game dev hobbist. (hope to finish something soon)
+    After work I make games in Godot. Runewheel is the first one I'm determined to finish.
 experience:
   title: Experience
-  description: My recent roles across frontend and full-stack development.
+  description: Every level I’ve cleared so far, newest first. Still playing the current one.
   items:
     - position: Senior Frontend Developer at
       date: Mar 2021 - Present

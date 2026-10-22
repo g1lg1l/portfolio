@@ -14,17 +14,16 @@ defineProps<{
       :items="links"
       variant="link"
       color="neutral"
-      class="bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
+      class="bg-muted/80 backdrop-blur-sm rounded-full px-1.5 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
       :ui="{
-        link: 'px-2 py-1',
+        link: 'px-1.5 py-1 text-xs sm:px-2 sm:text-sm',
         linkLeadingIcon: 'hidden'
       }"
     >
       <template #list-leading>
-        <NuxtLink to="/" aria-label="Home" class="mr-1 rounded-lg">
-          <GlassesMascot
-            tile
-            class="size-7 transition-transform hover:-rotate-6"
+        <NuxtLink to="/" aria-label="Home" class="group mr-1 rounded-sm">
+          <PixelLogo
+            class="size-7 transition-transform duration-300 ease-out group-hover:-translate-y-0.5"
           />
         </NuxtLink>
       </template>

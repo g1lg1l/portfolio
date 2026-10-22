@@ -1,11 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <VuebitsClickSpark>
     <UContainer class="pt-10">
       <AppHeader :links="navLinks" />
       <slot />
       <AppFooter />
     </UContainer>
-  </div>
+    <ClientOnly>
+      <BurnTransition />
+    </ClientOnly>
+  </VuebitsClickSpark>
 </template>

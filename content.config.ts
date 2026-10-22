@@ -112,6 +112,33 @@ export default defineContentConfig({
         seo: createSeoSchema().optional()
       })
     }),
+    // One file per game; the first ones are still in development
+    games: defineCollection({
+      type: 'data',
+      source: 'games/*.yml',
+      schema: z.object({
+        title: z.string().nonempty(),
+        slug: z.string().nonempty(),
+        tagline: z.string(),
+        description: z.string(),
+        status: z.string(),
+        version: z.string().optional(),
+        engine: z.string(),
+        platforms: z.array(z.string()),
+        tags: z.array(z.string()),
+        icon: z.string().optional(),
+        cover: z.string(),
+        screenshots: z.array(z.object({ src: z.string(), alt: z.string() })),
+        stats: z.array(z.object({ label: z.string(), value: z.number() })).optional(),
+        // The cast, as sprites: boss portraits (one frame) and character idle sheets (two frames)
+        bosses: z.array(z.object({ name: z.string(), floor: z.string(), image: z.string() })).optional(),
+        characters: z.array(z.object({ name: z.string(), blurb: z.string(), power: z.string(), sheet: z.string() })).optional(),
+        runes: z.array(z.string()).optional(),
+        devlog: z.array(z.string()).optional(),
+        url: z.string().optional(),
+        date: z.date()
+      })
+    }),
     blog: defineCollection({
       type: 'page',
       source: 'blog/*.md',

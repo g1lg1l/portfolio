@@ -76,7 +76,7 @@ const shots = computed(() => {
           </span>
         </div>
         <p
-          class="mt-3 font-serif text-3xl sm:text-4xl leading-tight text-highlighted text-pretty"
+          class="mt-3 font-pixel text-2xl sm:text-3xl leading-tight text-highlighted text-pretty"
         >
           {{ project.tagline || project.title }}
         </p>
@@ -102,7 +102,7 @@ const shots = computed(() => {
           color="neutral"
           :icon="isRepo ? 'i-simple-icons-github' : undefined"
           :label="isRepo ? 'View on GitHub' : `Open ${project.title}`"
-          trailing-icon="i-lucide-arrow-up-right"
+          trailing-icon="i-pixelarticons-external-link"
         />
         <UButton
           v-if="repoUrl && !isRepo"

@@ -21,9 +21,27 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: "gold",
+      primary: "violet",
       neutral: "neutral",
     },
+    icons: {
+      arrowLeft: "i-pixelarticons-arrow-left",
+      arrowRight: "i-pixelarticons-arrow-right",
+      check: "i-pixelarticons-check",
+      chevronDown: "i-pixelarticons-chevron-down",
+      chevronLeft: "i-pixelarticons-chevron-left",
+      chevronRight: "i-pixelarticons-chevron-right",
+      chevronUp: "i-pixelarticons-chevron-up",
+      close: "i-pixelarticons-close",
+      copy: "i-pixelarticons-copy",
+      copyCheck: "i-pixelarticons-check",
+      external: "i-pixelarticons-external-link",
+      search: "i-pixelarticons-search",
+    },
+    // Pixel type on everything you can press
+    button: { slots: { base: "font-pixel" } },
+    badge: { slots: { base: "font-pixel" } },
+    navigationMenu: { slots: { link: "font-pixel" } },
     pageHero: {
       slots: {
         container: "py-12 sm:py-16 lg:py-20",
@@ -38,31 +56,37 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        icon: "simple-icons:github",
+        icon: "i-pixelarticons-github",
         to: "https://github.com/g1lg1l",
         target: "_blank",
         "aria-label": "Gilbert on GitHub",
       },
       {
-        icon: "simple-icons:linkedin",
+        icon: "i-pixel-itchio",
+        to: "https://g1lg1l.itch.io/",
+        target: "_blank",
+        "aria-label": "Gilbert's games on itch.io",
+      },
+      {
+        icon: "i-pixelarticons-linkedin",
         to: "https://linkedin.com/in/gilbertndr/",
         target: "_blank",
         "aria-label": "Gilbert on LinkedIn",
       },
       {
-        icon: "simple-icons:bluesky",
+        icon: "i-pixelarticons-bluesky",
         to: "https://bsky.app/profile/g1lg1l.bsky.social",
         target: "_blank",
         "aria-label": "Gilbert on Bluesky",
       },
       {
-        icon: "simple-icons:spotify",
+        icon: "i-pixelarticons-music",
         to: "https://open.spotify.com/user/fmlddu645fmfbxo6z10moaydu?si=3c8a3739b95441b8",
         target: "_blank",
         "aria-label": "Gilbert on Spotify",
       },
       {
-        icon: "simple-icons:instagram",
+        icon: "i-pixelarticons-instagram",
         to: "https://www.instagram.com/g1l_g1l/",
         target: "_blank",
         "aria-label": "Gilbert on Instagram",

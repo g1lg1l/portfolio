@@ -1,0 +1,6 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "registries": {
+    "@vue-bits": "https://vue-bits.dev/r/{name}.json"
+  }
+}

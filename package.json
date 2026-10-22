@@ -16,6 +16,7 @@
   "dependencies": {
     "@iconify-json/logos": "^1.2.14",
     "@iconify-json/lucide": "^1.2.131",
+    "@iconify-json/pixelarticons": "^1.2.10",
     "@iconify-json/simple-icons": "^1.2.95",
     "@nuxt/content": "^3.16.2",
     "@nuxt/icon": "^2.5.1",
@@ -25,6 +26,7 @@
     "better-sqlite3": "^13.0.3",
     "motion-v": "^2.4.2",
     "nuxt": "^4.6.2",
+    "ogl": "^1.0.11",
     "tailwindcss": "^4.3.3",
     "three": "^0.186.0"
   },
@@ -34,9 +36,11 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.17.0",
+    "@types/three": "^0.186.0",
     "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.9.6",
+    "shadcn": "^4.22.1",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.11"
   }
