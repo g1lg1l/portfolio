@@ -8,6 +8,7 @@
       <AppFooter />
     </UContainer>
     <ClientOnly>
+      <PixelSeasons />
       <BurnTransition />
     </ClientOnly>
   </VuebitsClickSpark>

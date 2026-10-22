@@ -6,6 +6,13 @@ const { data: game } = await useAsyncData('now-playing', () =>
   queryCollection('games').order('date', 'DESC').first()
 )
 const spotify = footer.links?.find((l) => l.to?.includes('spotify'))
+
+// The background follows the calendar; this flips through the seasons
+const season = useState<Season | null>('season', () => null)
+const nextSeason = () => {
+  const i = SEASON_ORDER.indexOf(season.value ?? 'winter')
+  season.value = SEASON_ORDER[(i + 1) % SEASON_ORDER.length]!
+}
 </script>
 
 <template>
@@ -100,6 +107,18 @@ const spotify = footer.links?.find((l) => l.to?.includes('spotify'))
         </ULink>
       </p>
       <div class="-ml-2 flex">
+        <ClientOnly>
+          <UButton
+            v-if="season"
+            :icon="SEASONS[season].icon"
+            :label="SEASONS[season].label"
+            :aria-label="`Background: ${SEASONS[season].label}. Switch to the next season`"
+            size="md"
+            color="neutral"
+            variant="ghost"
+            @click="nextSeason"
+          />
+        </ClientOnly>
         <UButton
           :to="`mailto:${global.email}`"
           icon="i-pixelarticons-mail"
